@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 const Buttons = () => {
   return (
-    <motion.div className=" h-90">
+    <motion.div>
       <motion.div>
         {/* buttons */}
         {data.data.buttons.map((item) => {
@@ -19,7 +19,7 @@ const Buttons = () => {
         })}
       </motion.div>
       {/* text */}
-      <p className="text-center text-3xl  mt-5  pt-4  leading-[50px] ">
+      <p className="text-center  laptop:text-3xl phone:text-lg  leading-[50px] ">
         The solutions, systems, experiences, and relationships that reflect
         <br />
         <a href="H" className=" border-b  text-dark hover:bg-gray">
