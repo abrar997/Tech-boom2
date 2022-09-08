@@ -1,15 +1,17 @@
 import React from "react";
-import { data, images } from "../../constants";
+import { data } from "../../constants";
 import "./type.css";
 import { motion, useTransform, useViewportScroll } from "framer-motion";
+
 const Type = () => {
+
   const { scrollYProgress } = useViewportScroll();
   const scale = useTransform(scrollYProgress, [1, 1], [0.2, 1]);
+
   return (
     <motion.div
       style={{ scale }}
-      className="app__type h-100 padding-section "
-    >
+      className="app__type h-100 padding-section ">
       <div className="relative ">
         <motion.div
           style={{

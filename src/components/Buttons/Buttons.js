@@ -1,22 +1,11 @@
 import React from "react";
 import { data } from "../../constants";
-import { motion, transform, useTransform, useViewportScroll } from "framer-motion";
+import { motion } from "framer-motion";
+
 const Buttons = () => {
-  const { scrollYProgress } = useViewportScroll();
-  const scale = useTransform(scrollYProgress, [6, 1], [0.2, 1]);
   return (
-    <motion.div className="mt-4 pt-5" 
-      style={{scale}}
-    >
-      <motion.div
-        initial={{y:-250}}
-        animate={{y:-10}}
-        transition={{delay:0.2,type:"tween"}}
-        className="flex mt-5 pt-5 justify-center items-center "
-        style={{
-          scaleY: scrollYProgress,
-        }}
-    >
+    <motion.div className="mt-4 pt-5" style={{ scale }}>
+      <motion.div>
         {/* buttons */}
         {data.data.buttons.map((item) => {
           return (
@@ -28,7 +17,6 @@ const Buttons = () => {
             </button>
           );
         })}
-
       </motion.div>
       {/* text */}
       <p className="text-center text-3xl  mt-5  pt-4  leading-[50px] ">
