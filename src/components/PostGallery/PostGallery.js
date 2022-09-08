@@ -34,12 +34,13 @@ const PostGallery = () => {
 
         {/* start right with  box */}
         <div
-          className="absolute top-[320px] -right-[60px] laptop:right-20 laptop:top-[400px] phone:top[10px]
+          className="absolute top-[220px] -right-[60px] laptop:right-20 laptop:top-[400px] phone:top[10px]
           rotate-[120deg] z-3"
         >
           <img src={images.arrow} className="w-40 laptop:w-60" />
         </div>
-        <div className="absolute  -right-[250px]   top-[310px] laptop:right-40   laptop:top-[550px] phone:top[-80px]  z-3">
+        
+        <div className="absolute  -right-[270px]   top-[220px] laptop:right-40   laptop:top-[550px] phone:top[-80px]  z-3">
           <img src={images.bag} className="w-30 laptop:w-60 " />
         </div>
       </div>
