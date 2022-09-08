@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 const Buttons = () => {
   return (
-    <motion.div className="mt-4 pt-5" style={{ scale }}>
+    <motion.div className=" h-90">
       <motion.div>
         {/* buttons */}
         {data.data.buttons.map((item) => {

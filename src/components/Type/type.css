@@ -1,4 +1,22 @@
 .app__type {
   margin: auto;
-  margin-top: 60px;
+  margin-top: 70px;
+}
+
+@media screen and (max-width: 545px) {
+  .app__type {
+    margin-top: 0px;
+  }
+
+  .app__type-data {
+    flex-direction: column;
+  }
+
+  .app__type-data > div {
+    height: 400px;
+  }
+
+  .app__type_cards {
+    width: 100%;
+  }
 }
