@@ -1,8 +1,10 @@
 import React from "react";
 import { images } from "../../constants";
+
 const PostGallery = () => {
+
   return (
-    <section className=" top-10 laptop:top-10 mx-auto h-65 laptop:h-90  ">
+    <section className=" top-10 laptop:top-10 mx-auto h-70  laptop:h-90 ">
       {/* below img with z-index=0  for beach */}
       <div className="relative">
         <div className=" absolute beach z-0  laptop:left-[30px] h-40 phone:left-0 ">
@@ -18,13 +20,13 @@ const PostGallery = () => {
         {/* start left box */}
 
         <div
-          className="absolute left-[140px] top-[150px] laptop:left-[140px] laptop:top-[150px]
-          z-2 "
+          className="absolute left-[13px] top-[90px] laptop:left-[140px] laptop:top-[150px]
+          z-2"
         >
           <img src={images.border} className="w-40 laptop:w-40 phone:w-25" />
         </div>
         <div
-          className="absolute left-[140px] top-[120px]  laptop:left-[140px] laptop:top-[140px]
+          className="absolute left-[20px] top-[95px]  laptop:left-[140px] laptop:top-[140px]
           z-3 "
         >
           <img src={images.logo} className="w-40 laptop:w-40 phone:w-25" />
@@ -32,15 +34,16 @@ const PostGallery = () => {
 
         {/* start right with  box */}
         <div
-          className="invisible laptop:visible phone:invisible  absolute block laptop:block top-[400px] right-20 laptop:right-20 laptop:top-[400px] phone:top[10px]
+          className="absolute top-[320px] -right-[60px] laptop:right-20 laptop:top-[400px] phone:top[10px]
           rotate-[120deg] z-3"
         >
-          <img src={images.arrow} className="w-60" />
+          <img src={images.arrow} className="w-40 laptop:w-60" />
         </div>
-        <div className="absolute invisible laptop:visible phone:invisible  laptop:right-40 inline laptop:inline top-[500px]  laptop:top-[550px] phone:top[-80px]  z-3">
-          <img src={images.bag} className="w-60 " />
+        <div className="absolute  -right-[250px]   top-[310px] laptop:right-40   laptop:top-[550px] phone:top[-80px]  z-3">
+          <img src={images.bag} className="w-30 laptop:w-60 " />
         </div>
       </div>
+
     </section>
   );
 };

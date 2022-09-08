@@ -9,39 +9,42 @@ const Type = () => {
   return (
     <motion.div
       style={{ scale }}
-      className=" app__type padding-section mt-[100px] ">
-        <motion.div
-          style={{
-            scaleY: scrollYProgress,
-          }}
-          className="relative app__type-data flex flex-col   laptop:flex-row phone:flex-col "
-        >
-          {data.data.type.map((item) => {
-            return (
+      className=" app__type padding-section h-90 mt-[10px] "
+    >
+      <motion.div
+        style={{
+          scaleY: scrollYProgress,
+        }}
+        className=" app__type-data relative flex flex-col mt-0 laptop:mt-[100px]  laptop:flex-row phone:flex-col "
+      >
+        
+        {data.data.type.map((item) => { 
+          return (
+            <div key={item.id} className='flex flex-col laptop:flex-row '>
+              <img src={item.imgb} className="w-75 phone:-top-[10px]  invisible laptop:visible" />
               <div
-                key={item.id}
+                className="absolute z-7 app__type-data_top 
+                text-left -top-5"
               >
-                <img src={item.imgb} className="w-[100%] laptop:w-75 hidden laptop:visible" />
-                <div
-                  className="absolute app__type-data_top laptop:mr-12
-                text-left -top-12"
-                >
-                  <div className="" key={item.id}>
-                    <img src={item.img} className="w-img h-img left-[100px] " />
-                    <p className="text-xl mt-5  capitalize text-gray">
-                      {item.link}
-                    </p>
-                    <p className="text-l mt-3 text-black">{item.name} </p>
-                    <button className="border hover:text-black mt-3 p-3 text-gray px-2 w-10 rounded-sm">
-                      {item.btn}
-                    </button>
-                  </div>
+                <div className="" key={item.id}>
+                  <img
+                    src={item.img}
+                    className="w-img h-img"
+                  />
+                  <p className="text-xl mt-5 capitalize text-gray">
+                    {item.link}
+                  </p>
+                  <p className="text-l mt-3 text-black">{item.name} </p>
+                  <button className="border hover:text-black mt-3 p-3 text-gray px-2 w-10 rounded-sm">
+                    {item.btn}
+                  </button>
                 </div>
               </div>
-            );
-          })}
-        </motion.div>
-      <></>
+            </div>
+          );
+        })}
+        
+      </motion.div>
     </motion.div>
   );
 };
