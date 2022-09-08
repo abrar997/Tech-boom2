@@ -2,6 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer components {
+  .app__navbar div:nth-child(2) img {
+    @apply inline laptop:inline xl:inline md:phone:hidden;
+  }
+  .beach {
+    @apply h-40;
+  }
+}
 * {
   box-sizing: border-box;
 }
@@ -11,5 +19,4 @@
 }
 .image {
   filter: brightness(0.6);
-  height: 670px;
 }

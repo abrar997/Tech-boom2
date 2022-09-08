@@ -9,23 +9,19 @@ const Type = () => {
   return (
     <motion.div
       style={{ scale }}
-      className="app__type padding-section mt-[10px] phone:mt-[80px] "
-    >
-      <div className="relative ">
+      className=" app__type padding-section mt-[100px] ">
         <motion.div
           style={{
             scaleY: scrollYProgress,
           }}
-          className="app__type-data flex  flex-col phone:flex-row  
-            justify-around  "
+          className="relative app__type-data flex flex-col   laptop:flex-row phone:flex-col "
         >
           {data.data.type.map((item) => {
             return (
               <div
-                className="app__type_cards flex laptop:flex-row  phone:flex-col"
                 key={item.id}
               >
-                <img src={item.imgb} className="w-75" />
+                <img src={item.imgb} className="w-[100%] laptop:w-75 hidden laptop:visible" />
                 <div
                   className="absolute app__type-data_top laptop:mr-12
                 text-left -top-12"
@@ -45,7 +41,7 @@ const Type = () => {
             );
           })}
         </motion.div>
-      </div>
+      <></>
     </motion.div>
   );
 };

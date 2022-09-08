@@ -6,6 +6,7 @@ module.exports = {
       width: {
         100: "100%",
         90: "90%",
+        80: "85%",
         40: "40%",
         70: "70%",
         75: "75%",
@@ -18,19 +19,24 @@ module.exports = {
       },
       height: {
         100: "120vh",
-        90:"40vh",
+        90: "100vh",
+        80: "80vh",
         75: "75%",
+        70: "70vh",
+        60: "60vh",
+        65: "61vh",
         40: "40%",
         60: "60%",
         img: "340px",
+        
       },
-      colors: { 
+      colors: {
         main: "#eee",
         gray: "gray",
         dark: "black",
       },
       screens: {
-        phone: "450px",
+        phone: "665px",
         md: "768px",
         lg: "1024px",
         xl: "1280px",
